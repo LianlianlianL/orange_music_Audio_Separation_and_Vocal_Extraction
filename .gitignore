@@ -1,0 +1,148 @@
+# ============================================================
+# Music Piano Converter - .gitignore
+# 仓库: orange_music_Audio_Separation_and_Vocal_Extraction
+# ============================================================
+
+# ------------------ 用户音频数据（体积大，不入库）------------------
+data/input/**
+data/output/**
+data/temp/**
+*.flac
+*.FLAC
+*.wav
+*.WAV
+*.mp3
+*.MP3
+*.mid
+*.midi
+*.aac
+*.ogg
+*.m4a
+
+# ------------------ 大模型文件（>100MB，GitHub 拒收）------------------
+# .pth 是 ByteDance piano_transcription 权重，164MB
+models/piano_transcription/*.pth
+# torch_hub 缓存（自动下载）
+models/torch_hub/**
+# SoundFont 大文件
+*.sf2
+*.sfz
+# ffprobe 二进制（127MB）和压缩包
+models/ffprobe.exe
+models/ffprobe.zip
+
+# ------------------ Python 缓存 ------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# ------------------ IDE / 编辑器 ------------------
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.trae/
+.DS_Store
+Thumbs.db
+
+# ------------------ Flutter / Dart ------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.packages
+# pubspec.lock 通常保留（Flutter App 推荐入库）
+android/.gradle/
+android/app/build/
+android/build/
+**/.cxx/
+**/nb-cache/
+*.ser
+
+# ------------------ 构建产物 ------------------
+**/build/
+**/dist/
+**/.last_build_id
+**/hash_key.txt
+*.apk
+*.aab
+*.ipa
+
+# ------------------ 临时文件 ------------------
+temp_unzip/
+*.tmp
+*.bak
+*.log
+*.swp
+
+# ------------------ 环境与密钥 ------------------
+.env
+.env.local
+.env.*.local
+*.key
+secrets.json
+
+# ------------------ 操作系统 ------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------ 项目内冗余 ------------------
+1
+
+# ------------------ Flutter 平台特定构建产物 ------------------
+# Windows Flutter ephemeral (大文件 .so/.dylib 不入库)
+**/windows/flutter/ephemeral/
+**/ephemeral/
+# Flutter 插件符号链接缓存
+**/.plugin_symlinks/
+
+# ------------------ 临时解压目录 ------------------
+temp_unzip/
+**/temp_unzip/
+
+# ------------------ 二进制库 ------------------
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+
+# ------------------ 大型 zip / tar ------------------
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# ------------------ anz 根目录冗余文件 ------------------
+# 这些是历史遗留产物
+anz/Anz_HTDemucs_Test.apk
+anz/demucs.onnx-main.zip
+anz/demucs_mobile.onnx

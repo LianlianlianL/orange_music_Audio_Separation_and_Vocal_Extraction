@@ -1,0 +1,7 @@
+{
+    "soundfont_path": "models/SalamanderGrandPiano-master/SalamanderGrandPiano-master/Salamander Grand Piano V3.sfz",
+    "piano_model_path": "piano_transcription_inference_data",
+    "output_dir": "data/output",
+    "temp_dir": "data/temp",
+    "device": "cuda"
+}
