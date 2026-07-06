@@ -43,8 +43,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -57,6 +55,8 @@ venv/
 env/
 .pytest_cache/
 .mypy_cache/
+# 注意：不要排除 lib/，否则会误伤 Flutter 的 anz/lib/ 和 flutter_app/lib/
+
 
 # ------------------ IDE / 编辑器 ------------------
 .idea/
@@ -146,3 +146,13 @@ temp_unzip/
 anz/Anz_HTDemucs_Test.apk
 anz/demucs.onnx-main.zip
 anz/demucs_mobile.onnx
+
+# ------------------ 超大 ONNX 模型（>100MB，GitHub 拒收）------------------
+# 这些是桌面端 Demucs 完整模型，移动端用不到，需手动下载
+anz/assets/models/demucs.onnx
+anz/assets/models/htdemucs.onnx
+flutter_app/assets/models/demucs.onnx
+flutter_app/assets/models/htdemucs.onnx
+
+# ------------------ 简化版备份目录（不入库）------------------
+anz_backup_simplified/

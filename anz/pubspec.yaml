@@ -1,7 +1,7 @@
 name: anz
 description: "High-quality AI Music Piano Converter"
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.60.0+1
 
 environment:
   sdk: '>=3.10.1 <4.0.0'
@@ -13,7 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   
   # 音频处理与文件管理
-  ffmpeg_kit_flutter: ^6.0.3
+  ffmpeg_kit_flutter_new: ^4.1.0
   file_picker: ^8.0.0
   path_provider: ^2.1.1
   path: ^1.8.3
@@ -29,11 +29,29 @@ dependencies:
   google_fonts: ^6.1.0
   uuid: ^4.2.2
   dart_midi_pro: ^1.0.4+2
+  permission_handler: ^12.0.1
+  wakelock_plus: ^1.4.0
+  fftea: ^1.5.0+1
+  device_info_plus: ^12.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/icon.png"
+  windows:
+    generate: true
+    image_path: "assets/icon.png"
+    icon_size: 256
 
 flutter:
   uses-material-design: true
